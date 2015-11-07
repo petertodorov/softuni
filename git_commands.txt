@@ -1,0 +1,9 @@
+// create empty git repo
+git init 
+
+// add remote repo url
+git remote add origin <url to remote repo>
+
+// get all data from remote repo
+git pull origin master
+
