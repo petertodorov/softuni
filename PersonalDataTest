@@ -1,0 +1,50 @@
+using System;
+class PersonalDataTest
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter first name:");
+        string firstName = Console.ReadLine();
+        Console.WriteLine("Enter last name:");
+        string lastName = Console.ReadLine();
+        Console.WriteLine("Enter gender with F or M:");
+        string genderF = "F";
+        string genderM = "M";
+        string gender = Console.ReadLine();
+        Console.WriteLine("Enter age between 0 and 100:");
+        int age = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter ID with 10 digits:");
+        long iD =long.Parse(Console.ReadLine());
+        Console.WriteLine("Enter personal student number between 27560000 and 27569999:");
+        long personalNo = long.Parse(Console.ReadLine());
+        string error = "ERROR";
+        Console.WriteLine("First name:{0}", firstName);
+        Console.WriteLine("last name: {0}",lastName);
+        if (gender == genderF)
+        {
+            Console.WriteLine("Gender:{0}", genderF);
+        }
+        else
+        {
+            Console.WriteLine("Gender:{0}", genderM);
+        }
+        if (iD >0 && iD < 10000000000)
+        {
+            Console.WriteLine(iD);
+        }
+        else
+        {
+            Console.WriteLine(error);
+        }
+        if (personalNo > 27560000 && personalNo < 27569999)
+        {
+            Console.WriteLine(personalNo);
+        }
+        else
+        {
+            Console.WriteLine(error);
+        }
+        Console.WriteLine("Age {0}", age);
+    
+    }
+}
