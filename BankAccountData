@@ -12,7 +12,7 @@ class BankAccountData
         string lastName = Console.ReadLine();
         string holderName = firstName + " " + middleName + " " + lastName;
         Console.WriteLine("Enter balance:");
-        int balance = int.Parse(Console.ReadLine());
+        decimal balance = decimal.Parse(Console.ReadLine());
         Console.WriteLine("Enter name of the bank:");
         string bankName = Console.ReadLine();
         Console.WriteLine("Enter IBAN:");
