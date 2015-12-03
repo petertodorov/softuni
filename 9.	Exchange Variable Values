@@ -1,5 +1,5 @@
 using System;
-class InterChangeInt
+class ExchangeVarValues
 {
     static void Main()
     {
