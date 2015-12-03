@@ -1,0 +1,56 @@
+using System;
+class BankAccountData
+{
+    static void Main()
+    {
+        string error = "ERROR";
+        Console.WriteLine("Enter first name:");
+        string firstName = Console.ReadLine();
+        Console.WriteLine("Enter middle name:");
+        string middleName = Console.ReadLine();
+        Console.WriteLine("Enter last name:");
+        string lastName = Console.ReadLine();
+        string holderName = firstName + " " + middleName + " " + lastName;
+        Console.WriteLine("Enter balance:");
+        int balance = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter name of the bank:");
+        string bankName = Console.ReadLine();
+        Console.WriteLine("Enter IBAN:");
+        string iBan = Console.ReadLine();
+        Console.WriteLine("Enter  first credit card:");
+        int cc1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter  second credit card::");
+        int cc2 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter  third credit card::");
+        int cc3 = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < 4; i++)
+        {
+                Console.WriteLine("*");
+        }
+        Console.WriteLine("The holder name is:{0}", holderName);
+        if (balance > 0 && balance < 1000)
+        {
+            Console.WriteLine("Available amount of money is:{0}", balance);
+        }
+        else
+        {
+            Console.WriteLine(error);
+        }
+        Console.WriteLine("The bank name is: {0}", bankName);
+        Console.WriteLine("The IBAN is: {0}", iBan);
+        Console.WriteLine("The number of the  first credit card is:{0}", cc1);
+        Console.WriteLine("The number of the  second credit card is:{0}", cc2);
+        Console.WriteLine("The number of the  third credit card is:{0}", cc3);
+    }
+}
+
+
+
+
+
+
+
+
+
+
