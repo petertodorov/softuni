@@ -1,6 +1,6 @@
 using System;
 
-class InterExchangeIntSecond
+class ExchangeVarValuesSec
 {
     static void Main()
     {
