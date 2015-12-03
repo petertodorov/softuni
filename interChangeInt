@@ -1,0 +1,16 @@
+using System;
+class Test
+{
+    static void Main()
+    {
+        Console.WriteLine("write value of a:");
+        int a = int.Parse (Console.ReadLine());
+        Console.WriteLine("write value of b:");
+        int b = int.Parse(Console.ReadLine());
+        Console.WriteLine("Before: a = {0} and b = {1}", a,b);
+        int c = a;
+        int aCh = b;
+        int bCh = c;
+        Console.WriteLine("Now: a = {0} and b = {1}", aCh, bCh);
+    }
+}
