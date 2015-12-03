@@ -1,0 +1,38 @@
+using System;
+class ComparingFloats
+{
+    static void Main()
+    {
+        double a = 6.001D;
+        double compareA = 6.001D;
+
+        if (compareA >= a)
+        {
+            double diff = (compareA) - (a);
+            Console.WriteLine("Value of substraction to estimate equal to: ({0})", diff);
+
+            if (diff > 0.0001)
+            {
+                Console.WriteLine("Number (a) ={0} is not equal to number (compareA) = {1}", a, compareA);
+            }
+            else
+            {
+                Console.WriteLine("Numbers are equal");
+            }
+        }
+        else
+        {
+            double diffRevised = (a) - (compareA);
+            Console.WriteLine("Value of substraction to estimate equal to: ({0})", diffRevised);
+            if (diffRevised > 0.000001)
+            {
+                Console.WriteLine("Number (a) ={0} is not equal to number (compareA) = {1}", a, compareA);
+            }
+            else
+            {
+                Console.WriteLine("Numbers are equal");
+            }
+        }
+    }
+
+}
