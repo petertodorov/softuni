@@ -1,0 +1,14 @@
+using System;
+class NullValuesArithmetic
+{
+    static void Main()
+    {
+        int? nullable = null;
+        double? nullableDouble = null;
+        Console.WriteLine("The vallue of nullable is:{0} and the value of double nullable is:{1}"
+            ,nullable, nullableDouble);
+        Console.WriteLine(nullable +5);
+        Console.WriteLine(nullableDouble + 2.7);
+    }
+}
+
