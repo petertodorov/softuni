@@ -1,0 +1,16 @@
+using System;
+
+class InterExchangeIntSecond
+{
+    static void Main()
+    {
+        int a = 4;
+        int b = 7;
+        Console.WriteLine("Before:\n a = {0}; \n b = {1}", a, b);
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        Console.WriteLine("After: \n a = {0}; \n b = {1}", a, b);
+    }
+}
