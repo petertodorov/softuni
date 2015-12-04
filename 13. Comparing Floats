@@ -3,36 +3,42 @@ class ComparingFloats
 {
     static void Main()
     {
-        double a = 6.001D;
-        double compareA = 6.001D;
-
-        if (compareA >= a)
+        float firstA = 5.3f;
+        float firstB = 6.01f;
+        double secondA = 5.00000001;
+        double secondB = 5.00000003;
+        decimal thirdA = -0.0000007M;
+        decimal thirdB = 0.00000007M;
+        double fourthA = -4.999999;
+        double fourthB = -4.999998;
+        decimal fifthA = 4.999999M;
+        decimal fifthB = 4.999998M;
+        decimal sixthA = 5.00000005M;
+        decimal sixthB = 5.00000001M;
+        Console.WriteLine("Compare: {0} and {1}\n\nCompare: {2} and {3}\n\nCompare: {4} and {5}\n\nCompare: {6} and {7}\n\nCompare:{8} and {9}\n\nCompare:{10} and {11}",
+            firstA, firstB, secondA, secondB,sixthA,sixthB, thirdA, thirdB, fourthA, fourthB, fifthA,fifthB);
+        Console.WriteLine();
+        Console.WriteLine();
+        CompareNumbers((decimal)firstA, (decimal)firstB);
+        CompareNumbers((decimal)secondA, (decimal)secondB);
+        CompareNumbers(sixthA, sixthB);
+        CompareNumbers(thirdA, thirdB);
+        CompareNumbers((decimal)fourthA, (decimal)fourthB);
+        CompareNumbers(fifthA, fifthB);
+    }
+    private static void CompareNumbers(decimal numberA, decimal numberB) 
+    {
+        decimal result = Math.Abs(numberA - numberB);
+        
+        if (result< 0.000001M)
         {
-            double diff = (compareA) - (a);
-            Console.WriteLine("Value of substraction to estimate equal to: ({0})", diff);
-
-            if (diff > 0.0001)
-            {
-                Console.WriteLine("Number (a) ={0} is not equal to number (compareA) = {1}", a, compareA);
-            }
-            else
-            {
-                Console.WriteLine("Numbers are equal");
-            }
+            Console.WriteLine("{0}< 0.000001 - TRUE, Numbers are equal", result);
+            Console.WriteLine();
         }
         else
         {
-            double diffRevised = (a) - (compareA);
-            Console.WriteLine("Value of substraction to estimate equal to: ({0})", diffRevised);
-            if (diffRevised > 0.000001)
-            {
-                Console.WriteLine("Number (a) ={0} is not equal to number (compareA) = {1}", a, compareA);
-            }
-            else
-            {
-                Console.WriteLine("Numbers are equal");
-            }
+            Console.WriteLine("{0}>0.000001 -FALSE, Numbers are not equal", result);
+            Console.WriteLine();
         }
     }
-
 }
