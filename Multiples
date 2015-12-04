@@ -1,0 +1,27 @@
+using System;
+class Multiples
+{
+    static void Main()
+    {
+        for (int i = 1; i <= 100; i++)
+        {
+          
+            if (i % 3 == 0|| i % 5 == 0)
+                {
+                    Console.WriteLine("Multiple of 3 or 5"); 
+                }
+           
+            else if (i % 2 == 0 && i % 4 == 0)
+            {
+                Console.WriteLine("Multiple of 2 and 4");
+            }
+            else
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+//Write a program that prints the numbers from 1 to 100. 
+//But for multiples of three or five print "Multiple of 3 or 5" instead of the number
+//For numbers which are multiples of both two and four print ""Multiple of 2 and 4""
