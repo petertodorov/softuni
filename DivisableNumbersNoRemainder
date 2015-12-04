@@ -1,0 +1,31 @@
+using System;
+class DivisableNumbersNoRemainder
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter number a:");
+        int a = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter number b:");
+        int b = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter number c:");
+        int c = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter number d:");
+        int d = int.Parse(Console.ReadLine()); 
+        IsDividible(a, b);
+        IsDividible(c, d);
+    }
+    private static void IsDividible(int a, int b)
+    {
+      if( (a % b) == 0)
+        {
+            Console.WriteLine("({0}) is divisable by ({1})", a,b);
+            Console.WriteLine("tHE RESULT IS:{0}", (a/b));
+        }
+        else
+        {
+            Console.WriteLine();
+            Console.WriteLine("NOT DIVISABLE WITHOUT REMAINDER");
+        }
+    }
+}
+
