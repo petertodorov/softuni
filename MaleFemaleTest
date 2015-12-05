@@ -1,0 +1,22 @@
+using System;
+class MaleFemale
+{
+    static void Main()
+    {
+        Console.ReadKey().Key == ConsoleKey.F)
+        {
+            Console.WriteLine("Your gender is female");
+        }
+        else if(Console.ReadKey().Key == ConsoleKey.M)
+        {
+            Console.WriteLine("Your gender is male");
+        }
+        else
+        {
+            Console.WriteLine("error");
+        }
+    }
+}
+
+
+
