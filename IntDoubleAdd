@@ -1,0 +1,18 @@
+using System;
+class IntDoubleAdd
+{
+    static void Main()
+    {
+        int a = int.Parse(Console.ReadLine());
+
+        double b = double.Parse(Console.ReadLine());
+        if (b % 2 == 0)
+        {
+            Console.WriteLine(a + b);
+        }
+        else
+        {
+            Console.WriteLine((double)(a + b));
+        }
+    }
+}
