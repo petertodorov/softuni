@@ -12,9 +12,9 @@ class Multiples
                 }
            
             else if (i % 2 == 0 && i % 4 == 0)
-            {
-                Console.WriteLine("Multiple of 2 and 4");
-            }
+                {
+                    Console.WriteLine("Multiple of 2 and 4");
+                 }
             else
             {
                 Console.WriteLine(i);
