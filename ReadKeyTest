@@ -1,0 +1,17 @@
+using System;
+class ReadKeyTest
+    {
+        static void Main()
+        {
+       char read = Console.ReadKey().KeyChar;
+        char f =  'f';
+        char m = 'm';
+            {
+                Console.WriteLine("Your gender is female");
+            } while (read == f && read<2 &&read>1);
+        do
+        {
+            Console.WriteLine("Your gender is male");
+        } while (read==m );
+    }
+    }
