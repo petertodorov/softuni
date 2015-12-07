@@ -3,18 +3,28 @@ class MaleFemale
 {
     static void Main()
     {
-        if (Console.ReadKey().Key == ConsoleKey.F)
+        Console.Write("Choose gender with <f> or <m> ");
+        while (true)
         {
-                Console.WriteLine("Your gender is female");
-        }
-        if (Console.ReadKey().Key == ConsoleKey.M)
-        {
-            Console.WriteLine("Your gender is male");
-        }
-        else
-        {
-            Console.WriteLine("error");
-        }
+            {
+                ConsoleKey key = Console.ReadKey().Key;
+                {
+                    if (key == ConsoleKey.F)
+                    {
+                        Console.WriteLine(" ");
+                        Console.WriteLine("Your gender is female");
+                    }
+                    else if (key == ConsoleKey.M)
+                    {   Console.WriteLine(" ");
+                        Console.WriteLine("Your gender is male");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Escape");
+                    }
+                }
+            }
+       } 
     }
 }
 
