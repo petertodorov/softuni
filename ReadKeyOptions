@@ -1,0 +1,13 @@
+using System;
+class ReadKey
+{
+    static void Main()
+    {
+        while (true)
+        {
+            ConsoleKeyInfo key = Console.ReadKey();
+            Console.WriteLine();
+            Console.WriteLine("Character: {0}\nKey number: {1}\nButton: {2} \nPressed modifier: {3}", key.KeyChar, (int)key.Key, key.Key, key.Modifiers);
+        }
+    }
+}
