@@ -1,0 +1,17 @@
+using System;
+class ReadLineForCycle
+{
+    static void Main()
+    {
+        int input = int.Parse(Console.ReadLine());
+        
+        {
+            for (int i = input; i <= 100; i++)
+            {
+                string numberInput = Convert.ToString(i);
+                int digit = numberInput.Length;
+                Console.WriteLine("The input number is {0} and consists of {1} digits", i, digit);
+            }
+        }
+    }
+}
