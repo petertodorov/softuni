@@ -1,0 +1,17 @@
+using System;
+class RandomColorReadKey
+{
+    static void Main()
+    {
+        while (true)
+        {
+            ConsoleKeyInfo pressedKey = Console.ReadKey();
+            if (pressedKey.Key == ConsoleKey.Spacebar)
+            {
+                Random rnd = new Random();
+                int color = rnd.Next(1, 16);
+                Console.BackgroundColor = (ConsoleColor)color;
+            }
+        }
+    }
+}
