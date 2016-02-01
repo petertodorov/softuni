@@ -1,0 +1,25 @@
+using System;
+class Test
+{
+    static void Main()
+    {
+        while (true)
+        {
+
+            Console.WriteLine("Enter number");
+            int number = int.Parse(Console.ReadLine());
+            Console.WriteLine("The binary of the numnber is:{0}", Convert.ToString(number, 2).PadLeft(8, '0'));
+          
+            Console.WriteLine("enter bit to be shifted:");
+            int a = int.Parse(Console.ReadLine()); ;
+            int shifted = number >> a;
+
+            Console.WriteLine("The binary of the numnber is:{0}", Convert.ToString(shifted, 2).PadLeft(8, '0'));
+            Console.WriteLine("Enter mask:");
+            int mask = int.Parse(Console.ReadLine());
+            int result = shifted & mask;
+            Console.WriteLine(result);
+        }
+       
+    }
+}
