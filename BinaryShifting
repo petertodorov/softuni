@@ -14,8 +14,8 @@ class BinaryShifting
             int realBit = a - 1; 
             int shifted = number >> realBit;
             Console.WriteLine("The binary of the numnber is:{0}", Convert.ToString(shifted, 2).PadLeft(8, '0'));
-            Console.WriteLine("Enter mask:");
-            int mask = int.Parse(Console.ReadLine());
+            int mask = 1;
+            Console.WriteLine(" Mask = 1");
             int result = shifted & mask;
             Console.WriteLine("The bit is:{0}", result);
         }
