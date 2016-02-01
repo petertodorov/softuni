@@ -1,5 +1,5 @@
 using System;
-class Test
+class BinaryShifting
 {
     static void Main()
     {
@@ -9,17 +9,15 @@ class Test
             Console.WriteLine("Enter number");
             int number = int.Parse(Console.ReadLine());
             Console.WriteLine("The binary of the numnber is:{0}", Convert.ToString(number, 2).PadLeft(8, '0'));
-          
-            Console.WriteLine("enter bit to be shifted:");
+            Console.WriteLine("Enter bit to be shifted:");
             int a = int.Parse(Console.ReadLine()); ;
-            int shifted = number >> a;
-
+            int realBit = a - 1; 
+            int shifted = number >> realBit;
             Console.WriteLine("The binary of the numnber is:{0}", Convert.ToString(shifted, 2).PadLeft(8, '0'));
             Console.WriteLine("Enter mask:");
             int mask = int.Parse(Console.ReadLine());
             int result = shifted & mask;
-            Console.WriteLine(result);
+            Console.WriteLine("The bit is:{0}", result);
         }
-       
     }
 }
