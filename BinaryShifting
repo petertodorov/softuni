@@ -10,9 +10,8 @@ class BinaryShifting
             int number = int.Parse(Console.ReadLine());
             Console.WriteLine("The binary of the numnber is:{0}", Convert.ToString(number, 2).PadLeft(8, '0'));
             Console.WriteLine("Enter bit to be shifted:");
-            int a = int.Parse(Console.ReadLine()); ;
-            int realBit = a - 1; 
-            int shifted = number >> realBit;
+            int bit = int.Parse(Console.ReadLine());
+            int shifted = number >> bit;
             Console.WriteLine("The binary of the numnber is:{0}", Convert.ToString(shifted, 2).PadLeft(8, '0'));
             int mask = 1;
             Console.WriteLine(" Mask = 1");
