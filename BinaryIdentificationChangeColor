@@ -1,0 +1,42 @@
+using System;
+class BinaryIdentificationChange
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.Write("Enter number to turn into bits:");
+            short number = short.Parse(Console.ReadLine());
+            Console.WriteLine("Bit representation is:{0}",Convert.ToString(number, 2).PadLeft(16, '0'));
+            {
+                Console.Write("Enter bit to be identified:");
+                int bitIdent = int.Parse(Console.ReadLine());
+                int shifted = number >> bitIdent;
+                int maskIdent = 1;
+                Console.WriteLine("Mask = 1");
+                int result = shifted & maskIdent;
+                Console.WriteLine("The bit is:{0}", result);
+                if (result == 1)
+                {
+                    Console.WriteLine("Change identified bit {0} to 0", bitIdent);
+                    int mask = 1 << bitIdent;
+                    Console.WriteLine("Mask bit is:{0}", Convert.ToString(mask, 2).PadLeft(16, '0'));
+                    int newNumber = number ^ mask;
+                    string newNumberBit = Convert.ToString(newNumber, 2).PadLeft(16, '0');
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("Original bit is:{0,17}", Convert.ToString(number, 2).PadLeft(16, '0'));
+                    Console.WriteLine("Changed bit is:{0,18}", newNumberBit);
+                    Console.ResetColor();
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("THE VALUE OF THE BIT IS ZERO (0)");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.ResetColor();
+                }
+            }
+        }
+    }
+}
