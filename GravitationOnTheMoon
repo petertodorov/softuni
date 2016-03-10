@@ -1,0 +1,14 @@
+using System;
+class GravitationOnTheMoon
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.Write("Enter weight on Earth: ");
+            double weight = double.Parse(Console.ReadLine().Replace('.',','));
+            double moonWeight = (weight * 17)/100;
+            Console.WriteLine("Your weight on Moon would be:{0}", moonWeight);
+        }
+    }
+}
