@@ -1,0 +1,23 @@
+using System;
+class OddOrEvenIntegers
+{
+    static void Main()
+    {
+        while (true)
+        {
+            int numberToCheck= int.Parse(Console.ReadLine());
+            bool odd = true; 
+            odd= (numberToCheck % 2 != 0);
+            if (odd)
+            {
+                Console.WriteLine(odd);
+            }
+            else
+            {
+                Console.WriteLine(!odd);
+            }
+        }
+    }
+}
+        
+    
