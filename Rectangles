@@ -1,0 +1,18 @@
+using System;
+class Rectangles
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.Write("Enter wight:");
+            double wight = double.Parse(Console.ReadLine().Replace('.', ','));
+            Console.Write("Enter height:");
+            double height = double.Parse(Console.ReadLine().Replace('.', ','));
+            double area = wight * height;
+            double perimeter = 2 * (height + wight);
+            Console.WriteLine("The perimeter of the rectange is: {0} and the area is: {1}",
+                perimeter, area);
+        }
+    }
+}
