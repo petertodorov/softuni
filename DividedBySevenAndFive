@@ -1,0 +1,24 @@
+using System;
+class DividedBySevenAndFive
+{
+    static void Main()
+    {
+        while (true)
+        {
+            int number = int.Parse(Console.ReadLine());
+            bool firstCHeck = true;
+            bool secondCheck = !firstCHeck;
+            firstCHeck = (number % 7 == 0 && number % 5 == 0);
+            if (firstCHeck && number != 0)
+            {   
+                Console.WriteLine("{0}: {1}", firstCHeck,
+                    "Can be divided by 7 and 5 at the same time");
+            }
+            else
+            {
+                Console.WriteLine("{0}: {1}", secondCheck,
+                    "CANNOT be divided  by 7 and 5 at the same time");
+            }
+        }
+    }
+}
