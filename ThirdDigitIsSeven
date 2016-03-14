@@ -1,22 +1,16 @@
 using System;
-class ThirdDigitIsSeven
+class ThirdFigitIsSeven
 {
     static void Main()
     {
         while (true)
         {
-            Console.Write("Enter number: ");
+            Console.WriteLine("enter number:");
             int number = int.Parse(Console.ReadLine());
-            int digitLast = number / 100;
-            int thirdDigit = digitLast % 10;
-            if (thirdDigit == 7)
-            {
-                Console.WriteLine("The third digit is{0}", thirdDigit);
-            }
-            else
-            {
-                Console.WriteLine("Third digit is not SEVEN");
-            }
+            int thirdDigit = number / 100;
+            int digitFind = thirdDigit % 10;
+            bool check = digitFind == 7;
+            Console.WriteLine(check);
         }
     }
 }
