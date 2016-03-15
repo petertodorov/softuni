@@ -1,0 +1,15 @@
+using System;
+class DigitPositionInNumber
+{
+    static void Main()
+    {
+        while (true)
+        {
+            string number = Console.ReadLine();
+            char [] arrayNumber =number.ToCharArray();
+            char thirdPosition = Convert.ToChar(arrayNumber.GetValue(2));
+            int neededDigit = Convert.ToInt32(char.GetNumericValue(thirdPosition));
+            Console.WriteLine("The digit on position three is: {0}",neededDigit);
+        }
+    }
+}
