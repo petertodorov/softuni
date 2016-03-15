@@ -1,0 +1,30 @@
+using System;
+class FourDigitNumber
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.Write("Enter number:");
+            string digits = Console.ReadLine();
+            char[] inputDigit = digits.ToCharArray();
+            char digitOne = digits[0];
+            char digitTwo = digits[1];
+            char digitThree = digits[2];
+            char digitFour = digits[3];
+            Console.WriteLine("The separate digits are:{0} - {1} - {2} - {3}",
+                digits[0], digits[1], digits[2], digits[3]);
+            int convDigitOne = Convert.ToInt32(char.GetNumericValue(digitOne));
+            int convDigitTwo = Convert.ToInt32(char.GetNumericValue(digitTwo));
+            int convDigitThree = Convert.ToInt32(char.GetNumericValue(digitThree));
+            int convDigitFour = Convert.ToInt32(char.GetNumericValue(digitFour));
+            int sumDigits = (convDigitOne + convDigitTwo + convDigitThree + convDigitFour);
+            Console.WriteLine("The sum of the four digits is: {0}", sumDigits);
+            Array.Reverse(inputDigit);
+            string reversedDigit = new string(inputDigit);
+            Console.WriteLine("The reversed number is:{0}", reversedDigit);
+            Console.WriteLine("last digit in the first position:{0}{1}{2}{3}", digitFour, digitOne, digitTwo, digitThree);
+            Console.WriteLine("Changed third with second digit:{0}{1}{2}{3}", digitOne, digitThree, digitTwo, digitFour);
+        }
+    }
+}
