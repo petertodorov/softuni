@@ -14,18 +14,20 @@ class FindBiggestNumber
             int d = a > b ? a : b;
             int e = c > d ? c : d;
             int f = g > e ? g : e;
-            Console.WriteLine("The biggest number is{0}", f);
+            Console.WriteLine("The biggest number is {0}", f);
             if (g > e)
             {
-                Console.WriteLine("The biggest number is{0}", g);
+                Console.WriteLine("The biggest number is {0}", g);
             }
             else
             {
-                Console.WriteLine("The biggest number is{0}", e);
+                Console.WriteLine("The biggest number is {0}", e);
             }
             int[] numbers = { a, b, c, g };
             int biggest = numbers.Max();
-            Console.WriteLine("The biggest number is{0}", biggest);
+            Console.WriteLine("The biggest number is {0}", biggest);
+            int maxBiggest = Math.Max(a, Math.Max(b, Math.Max(c, d)));
+            Console.WriteLine("The biggest number is {0}", maxBiggest);
         }
     }
 }
