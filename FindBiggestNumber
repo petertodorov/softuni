@@ -26,8 +26,10 @@ class FindBiggestNumber
             int[] numbers = { a, b, c, g };
             int biggest = numbers.Max();
             Console.WriteLine("The biggest number is {0}", biggest);
-            int maxBiggest = Math.Max(a, Math.Max(b, Math.Max(c, d)));
-            Console.WriteLine("The biggest number is {0}", maxBiggest);
+            int one = Math.Max(a, b);
+            int two = Math.Max(c, g);
+            int max = Math.Max(one, two);
+            Console.WriteLine("The biggest number is {0}", max);
         }
     }
 }
