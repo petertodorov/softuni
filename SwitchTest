@@ -1,0 +1,16 @@
+using System;
+class SwitchTest
+{
+    static void Main()
+    {
+        string day = Console.ReadLine();
+
+        switch (day)
+
+        {
+            case "Monday": Console.WriteLine("This is the first day of the week"); break;
+            case "Tuesday": Console.WriteLine("This is the second day of the week"); break;
+            case "Wednesday": Console.WriteLine("This is the third day of the week"); break;
+        }
+    }
+}
