@@ -1,0 +1,20 @@
+using System;
+class ExchangeIfGreater
+{
+    static void Main()
+    {
+        while (true)
+        {
+            int first = int.Parse(Console.ReadLine());
+            int second = int.Parse(Console.ReadLine());
+            if (first > second)
+            {
+                Console.WriteLine("{0} {1}", second, first);
+            }
+            else
+            {
+                Console.WriteLine("{0} {1}", first, second);
+            }
+        }
+    }
+}
