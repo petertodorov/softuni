@@ -5,8 +5,8 @@ class ExchangeIfGreater
     {
         while (true)
         {
-            int first = int.Parse(Console.ReadLine());
-            int second = int.Parse(Console.ReadLine());
+            double first = double.Parse(Console.ReadLine());
+            double second = double.Parse(Console.ReadLine().Replace(',', '.'));
             if (first > second)
             {
                 Console.WriteLine("{0} {1}", second, first);
