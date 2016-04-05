@@ -1,0 +1,31 @@
+using System;
+class CheckForAPlayCard
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("Enter car character:");
+            string yes = "yes";
+            string no = "no";
+            string character = Console.ReadLine();
+            switch (character)
+            {
+                case "2": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "3": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "4": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "5": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "6": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "7": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "8": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "9": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "10": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "J": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "Q": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "K": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                case "A": Console.WriteLine("Valid Card Sign? {0}", yes); break;
+                default: Console.WriteLine("Valid Card Sign? {0}", no); break;
+            }
+        }
+    }
+}
