@@ -1,0 +1,37 @@
+using System;
+class TravellerBob
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("Enter the type of year: leap/normal");
+            string typeOfYear = Console.ReadLine();
+            Console.WriteLine("Enter number of contract months for Bob:");
+            int contractMonth = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter number of family months for Bob:");
+            int familyMonth = int.Parse(Console.ReadLine());
+            int numberNormalMonths = 12 - (contractMonth + familyMonth);
+            double normalMonthsTravel = (numberNormalMonths * 12);
+            double normalMonthsTravelCoeficient = normalMonthsTravel * 0.6;
+            int weekInMonth = 4;
+            int timesPerContractWeek = 3;
+            int travelContractMonthNumber = contractMonth * (timesPerContractWeek * weekInMonth);
+            int timesPerFamilyWeek = timesPerContractWeek - 1;
+            int travelFamilyMonthNumber = familyMonth * (timesPerFamilyWeek * (weekInMonth / 2));
+            double annualTravelsNumber =
+                (travelContractMonthNumber + travelFamilyMonthNumber + normalMonthsTravelCoeficient);
+            if (typeOfYear == "leap")
+            {
+                double leapTravelIncrease = annualTravelsNumber * 0.05;
+                double annualLeapTravel = annualTravelsNumber + leapTravelIncrease;
+                Console.WriteLine("travels {0}", Math.Floor(annualLeapTravel));
+            }
+            else
+            {
+                Console.WriteLine("travels {0}", Math.Floor(annualTravelsNumber));
+            }
+        }
+    }
+}
+
