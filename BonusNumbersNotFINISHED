@@ -18,21 +18,18 @@ class Test
                 if (a % 2 == 0)
                 {
                     Console.WriteLine(a + bonusFive + bonusEven);
-
                 }
-                if (endsFive == true)
-                {
-
+               else if (endsFive == true)
                     {
                         Console.WriteLine(a + bonusFive + bonusEndsFive);
                     }
-                }
-                else
+           else
                 {
                     Console.WriteLine(a + bonusFive);
-
                 }
+
             }
+            
             else if (a > 100)
             {
                 Console.WriteLine(a + bonus);
