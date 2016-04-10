@@ -1,0 +1,46 @@
+using System;
+class Test
+{
+    static void Main()
+    {
+        while (true)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int bonusFive = 5;
+            double bonus = a * 0.2;
+            double bonusThousand = a * 0.1;
+            string check = Convert.ToString(a);
+            bool endsFive = check.EndsWith("5");
+            int bonusEven = 1;
+            int bonusEndsFive = 2;
+            if (a <= 100)
+            {
+                if (a % 2 == 0)
+                {
+                    Console.WriteLine(a + bonusFive + bonusEven);
+
+                }
+                if (endsFive == true)
+                {
+
+                    {
+                        Console.WriteLine(a + bonusFive + bonusEndsFive);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(a + bonusFive);
+
+                }
+            }
+            else if (a > 100)
+            {
+                Console.WriteLine(a + bonus);
+            }
+            else if (a > 1000)
+            {
+                Console.WriteLine(a + bonusThousand);
+            }
+        }
+    }
+}
