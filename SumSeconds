@@ -1,0 +1,40 @@
+using System;
+class SumSeconds
+{
+    static void Main()
+    {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            int seconds = a + b + c;
+            int mins = seconds / 60;
+            double minsSeconds = seconds / 60D;
+            int onlySeconds = seconds % 60;
+            if (mins == 0 && (seconds >= 0 && seconds <= 9))
+            {
+                Console.WriteLine("0:0{0}", onlySeconds);
+            }
+            else if (mins == 0 && (seconds >= 9 && seconds <= 59))
+            {
+                Console.WriteLine("0:{0}", onlySeconds);
+            }
+            else if (mins >= 1 && (seconds >= 60 && seconds <= 69))
+            {
+                Console.WriteLine("1:0{0}", onlySeconds);
+            }
+            else if (mins >= 1 && (seconds >= 70 && seconds <= 119))
+            {
+                Console.WriteLine("1:{0}", onlySeconds);
+            }
+            else if (mins >= 2 && (seconds >= 120 && seconds <= 129))
+            {
+                Console.WriteLine("2:0{0}", onlySeconds);
+            }
+            else if (mins >= 1 && (seconds >= 130 && seconds <= 179))
+            {
+                Console.WriteLine("2:{0}", onlySeconds);
+            }
+    }
+}
+
+
