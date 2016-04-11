@@ -1,0 +1,70 @@
+using System;
+class Test
+{
+    static void Main()
+    {
+            float a = float.Parse(Console.ReadLine());
+            int bonusHundred = 5;
+            float bonusOverHundred = a * 0.2F;
+            float bonusThousand = a * 0.1F;
+            string check = Convert.ToString(a);
+            bool endsFive = check.EndsWith("5");
+            int bonusEven = 1;
+            int bonusEndsFive = 2;
+            if (a <= 100)
+            {
+                if (a % 2 == 0)
+                {
+                    Console.WriteLine(bonusHundred + bonusEven);
+                    Console.WriteLine(a + bonusHundred + bonusEven);
+                }
+                else if (endsFive == true)
+                {
+                    Console.WriteLine(bonusHundred + bonusEndsFive);
+                    Console.WriteLine(a + bonusHundred + bonusEndsFive);
+                }
+                else
+                {
+                    Console.WriteLine(bonusHundred);
+                    Console.WriteLine(a + bonusHundred);
+                }
+            }
+
+            else if (a > 100 && a < 1000)
+            {
+                if (a % 2 == 0)
+                {
+                    Console.WriteLine(bonusOverHundred + bonusEven);
+                    Console.WriteLine(a + bonusOverHundred + bonusEven);
+                }
+                else if (endsFive == true)
+                {
+                    Console.WriteLine(bonusOverHundred + bonusEndsFive);
+                    Console.WriteLine(a + bonusOverHundred + bonusEndsFive);
+                }
+                else
+                {
+                    Console.WriteLine(bonusOverHundred);
+                    Console.WriteLine(a + bonusOverHundred);
+                }
+            }
+            else if (a > 1000)
+            {
+                if (a % 2 == 0)
+                {
+                    Console.WriteLine(bonusThousand + bonusEven);
+                    Console.WriteLine(a + bonusThousand + bonusEven);
+                }
+                else if (endsFive == true)
+                {
+                    Console.WriteLine(bonusThousand + bonusEndsFive);
+                    Console.WriteLine(a + bonusThousand + bonusEndsFive);
+                }
+                else
+                {
+                    Console.WriteLine(bonusThousand);
+                    Console.WriteLine(a + bonusThousand);
+                }
+            }
+    }
+}
