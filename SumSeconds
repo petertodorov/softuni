@@ -8,7 +8,6 @@ class SumSeconds
             int c = int.Parse(Console.ReadLine());
             int seconds = a + b + c;
             int mins = seconds / 60;
-            double minsSeconds = seconds / 60D;
             int onlySeconds = seconds % 60;
             if (mins == 0 && (seconds >= 0 && seconds <= 9))
             {
