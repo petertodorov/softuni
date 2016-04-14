@@ -1,0 +1,45 @@
+using System;
+class GradeSystem
+{
+    static void Main()
+    {
+        while (true)
+        {
+            double score = double.Parse(Console.ReadLine());
+            if (score >2 && score <7)
+            {
+                if (score <= 6)
+                {
+                    if (score >= 5 && score <= 5.5)
+                    {
+                        Console.WriteLine("Score is very good");
+                    }
+                    else if (score >= 4 && score < 5)
+                    {
+                        Console.WriteLine("Socre is good");
+                    }
+                    else if (score >= 3 && score < 4)
+                    {
+                        Console.WriteLine("Socre is average");
+                    }
+                    else if (score==6)
+                    {
+                        Console.WriteLine("Exclent");
+                    }
+                    else if (score >=5.50 && score<=6 )
+                    {
+                        Console.WriteLine("Score is excelent");
+                    }
+                }
+            }
+            else if (score==2)
+            {
+                Console.WriteLine("Score is bad");
+            }
+            else
+            {
+                Console.WriteLine("Invalid score");
+            }
+        }     
+    }
+}
