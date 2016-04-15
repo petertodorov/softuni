@@ -1,0 +1,52 @@
+using System;
+class MrOrMs
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("Enter gender: m/f");
+            string gender = Console.ReadLine();
+            string male = "m";
+            string female = "f";
+
+            if (gender != male && gender != female)
+            {
+                Console.WriteLine("Incorrect gender");
+            }
+            else
+            {
+                Console.WriteLine("Enter age: ");
+                int age = int.Parse(Console.ReadLine());
+                if (gender == male)
+                {
+                    if (age >= 16)
+                    {
+                        Console.WriteLine("Mr");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Master");
+                    }
+                }
+                else if (gender == female)
+                {
+                    if (age >= 16)
+                    {
+                        Console.WriteLine("Ms");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Miss");
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("INCORRECT");
+                }
+            }
+            
+        }
+    }
+}
