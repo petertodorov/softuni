@@ -1,0 +1,19 @@
+using System;
+class PowerNumber
+{
+    static void Main()
+    {
+        Console.Write("n= ");
+        string numAsString = Console.ReadLine();
+        int n = int.Parse(numAsString);
+        Console.Write("m= ");
+        numAsString = Console.ReadLine();
+        int m = int.Parse(numAsString);
+        int result = 1;
+        for (int i = 0; i < m; i++)
+        {
+            result *= n;
+        }
+        Console.WriteLine("n ^ m {0}", result);
+    }
+}
