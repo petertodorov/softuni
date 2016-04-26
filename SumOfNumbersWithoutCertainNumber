@@ -1,0 +1,24 @@
+using System;
+class SumOfNumbersWithoutCertainNumber
+{
+    static void Main()
+    {
+
+        int n = int.Parse(Console.ReadLine());
+        int sum = 0;
+        int coef = int.Parse(Console.ReadLine());
+        for (int i = 1; i < n; i+=2)
+        {
+            if (i%coef==0)
+            {
+                continue;
+            }
+            sum = sum + i;
+            Console.Write("{0} ",i);
+        }
+        Console.WriteLine();
+        Console.WriteLine(
+            "The sum of the numbers excluding the ones that can be divided by 3 is:{0}",sum);
+    }
+}
+
