@@ -1,0 +1,40 @@
+using System;
+class LeftAndRightSum
+{
+    static void Main()
+    {
+        int sumFirst = 0;
+        int n = int.Parse(Console.ReadLine());
+        Console.WriteLine();
+        for (int i = 0; i < n; i++)
+        {
+            int currentFirst = int.Parse(Console.ReadLine());
+            sumFirst += currentFirst;
+        }
+        Console.WriteLine();
+        int sumSecond = 0;
+        for (int i = 0; i < n; i++)
+        {
+            int currentSecond = int.Parse(Console.ReadLine());
+            sumSecond += currentSecond;
+        }
+        if (sumFirst.Equals(sumSecond))
+        {
+            Console.WriteLine("Yes, sum = " + (sumFirst));
+        }
+        else if (sumFirst != sumSecond)
+        {
+            int result = sumFirst - sumSecond;
+            if (result < 0)
+            {
+                int resultPossitive = result * (-1);
+                Console.WriteLine("No, diff = " + (resultPossitive));
+            }
+            else
+            {
+                Console.WriteLine("No, diff = " + (result));
+
+            }
+        }
+    }
+}
