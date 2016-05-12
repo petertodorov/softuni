@@ -1,0 +1,128 @@
+using System;
+
+class CowsAndBullsGame
+{
+    static void Main()
+    {
+        Console.WriteLine("A random two digit number will be generated or you can choose a friend to enter a two digit number.If you want a random number, please press: 1. If you want a friend's number please press: 2. Your task is to guess the number, by first guessing the first digit and after that the second. If you guess a digit, you will get a sign |Bull| and you will be allowed to guess the cesond digit. If you don't guess the digit, a sign|Cow| will be given and you have to guess the digit again");
+        int randomNumber = 0;
+        ConsoleKeyInfo one = Console.ReadKey();
+        if (one.Key==ConsoleKey.D1)
+        {
+            Random generated = new Random();
+            randomNumber = generated.Next(10, 99);
+            Console.WriteLine("The random number has been generated");
+            string number = Convert.ToString(randomNumber);
+            int control = 2;
+            int convNumber = number.Length;
+            int attemptCounterFirst = 1;
+            int attemptCounterSecond = 1;
+            while (convNumber != control)
+            {
+                if (convNumber != control)
+                {
+                    Console.WriteLine("Please enter 2 digit number:");
+                    number = Console.ReadLine();
+                    convNumber = number.Length;
+                }
+            }
+            Console.WriteLine("Proceed further");
+            string firstControl = Convert.ToString(number[0]);
+            Console.WriteLine("Guess the first digit:");
+            string firstDigit = Console.ReadLine();
+            while (firstDigit != firstControl)
+            {
+                if (firstDigit != firstControl)
+                {
+                    Console.WriteLine("Cow");
+                    Console.WriteLine("Guess the first number:");
+                    firstDigit = Console.ReadLine();
+                    attemptCounterFirst++;
+                }
+            }
+            if (firstDigit == firstControl)
+            {
+                Console.WriteLine("Bull");
+               
+                Console.WriteLine("You have tried to guess the number with {0} try", attemptCounterFirst);
+                Console.WriteLine("Guess the second number:");
+            }
+            string secondDigit = Console.ReadLine();
+            string secondControl = Convert.ToString(number[1]);
+            while (secondDigit != secondControl)
+            {
+                if (secondDigit != secondControl)
+                {
+                    Console.WriteLine("Cow");
+                    Console.WriteLine("Guess the second number:");
+                    secondDigit = Console.ReadLine();
+                    attemptCounterSecond++;
+                }
+            }
+            if (secondDigit == secondControl)
+            {
+                Console.WriteLine("Bull");
+                
+                Console.WriteLine("You have tried to guess the number with {0} try", attemptCounterSecond);
+                Console.WriteLine("You've guessed the number.The number is:{0}", number);
+            }
+        }
+        else
+        {
+            int attemptCounterFirst = 1;
+            int attemptCounterSecond = 1;
+            Console.WriteLine("Please enter two digit number:");
+            string number = Console.ReadLine();
+            int control = 2;
+            int convNumber = number.Length;
+
+            while (convNumber != control)
+            {
+                if (convNumber != control)
+                {
+                    Console.WriteLine("Please enter 2 digit number:");
+                    number = Console.ReadLine();
+                    convNumber = number.Length;
+                }
+            }
+            Console.WriteLine("Proceed further");
+            string firstControl = Convert.ToString(number[0]);
+            Console.WriteLine("Guess the first digit:");
+            string firstDigit = Console.ReadLine();
+            while (firstDigit != firstControl)
+            {
+                if (firstDigit != firstControl)
+                {
+                    Console.WriteLine("|Cow|");
+                    Console.WriteLine("Guess the first number:");
+                    firstDigit = Console.ReadLine();
+                    attemptCounterFirst++;
+                }
+            }
+            if (firstDigit == firstControl)
+            {
+                Console.WriteLine("|Bull|");
+                Console.WriteLine("You have managed to guess the number with |{0}| try", attemptCounterFirst);
+                Console.WriteLine("Guess the second number:");
+            }
+            string secondDigit = Console.ReadLine();
+            string secondControl = Convert.ToString(number[1]);
+            while (secondDigit != secondControl)
+            {
+                if (secondDigit != secondControl)
+                {
+                    Console.WriteLine("Cow");
+                    Console.WriteLine("Guess the second number:");
+                    secondDigit = Console.ReadLine();
+                    attemptCounterSecond++;
+                }
+            }
+            if (secondDigit == secondControl)
+            {
+                Console.WriteLine("Bull");
+                Console.WriteLine("You have managed to guess the number with |{0}| try", attemptCounterSecond);
+                Console.WriteLine("You've guessed the number.The number is:{0}", number);
+            }
+        }
+    }
+}
