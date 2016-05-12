@@ -7,7 +7,7 @@ class CowsAndBullsGame
         Console.WriteLine("A random two digit number will be generated or you can choose a friend to enter a two digit number.If you want a random number, please press: 1. If you want a friend's number please press: 2. Your task is to guess the number, by first guessing the first digit and after that the second. If you guess a digit, you will get a sign |Bull| and you will be allowed to guess the cesond digit. If you don't guess the digit, a sign|Cow| will be given and you have to guess the digit again");
         int randomNumber = 0;
         ConsoleKeyInfo one = Console.ReadKey();
-        if (one.Key==ConsoleKey.D1)
+        if (one.Key == ConsoleKey.D1)
         {
             Random generated = new Random();
             randomNumber = generated.Next(10, 99);
@@ -34,17 +34,20 @@ class CowsAndBullsGame
             {
                 if (firstDigit != firstControl)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Cow");
                     Console.WriteLine("Guess the first number:");
+                    Console.ResetColor();
                     firstDigit = Console.ReadLine();
                     attemptCounterFirst++;
                 }
             }
             if (firstDigit == firstControl)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Bull");
-               
                 Console.WriteLine("You have tried to guess the number with {0} try", attemptCounterFirst);
+                Console.ResetColor();
                 Console.WriteLine("Guess the second number:");
             }
             string secondDigit = Console.ReadLine();
@@ -53,17 +56,20 @@ class CowsAndBullsGame
             {
                 if (secondDigit != secondControl)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Cow");
                     Console.WriteLine("Guess the second number:");
+                    Console.ResetColor();
                     secondDigit = Console.ReadLine();
                     attemptCounterSecond++;
                 }
             }
             if (secondDigit == secondControl)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Bull");
-                
                 Console.WriteLine("You have tried to guess the number with {0} try", attemptCounterSecond);
+                Console.ResetColor();
                 Console.WriteLine("You've guessed the number.The number is:{0}", number);
             }
         }
@@ -93,16 +99,20 @@ class CowsAndBullsGame
             {
                 if (firstDigit != firstControl)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("|Cow|");
                     Console.WriteLine("Guess the first number:");
+                    Console.ResetColor();
                     firstDigit = Console.ReadLine();
                     attemptCounterFirst++;
                 }
             }
             if (firstDigit == firstControl)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("|Bull|");
                 Console.WriteLine("You have managed to guess the number with |{0}| try", attemptCounterFirst);
+                Console.ResetColor();
                 Console.WriteLine("Guess the second number:");
             }
             string secondDigit = Console.ReadLine();
@@ -111,18 +121,23 @@ class CowsAndBullsGame
             {
                 if (secondDigit != secondControl)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Cow");
                     Console.WriteLine("Guess the second number:");
+                    Console.ResetColor();
                     secondDigit = Console.ReadLine();
                     attemptCounterSecond++;
                 }
             }
             if (secondDigit == secondControl)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Bull");
                 Console.WriteLine("You have managed to guess the number with |{0}| try", attemptCounterSecond);
                 Console.WriteLine("You've guessed the number.The number is:{0}", number);
+                Console.ResetColor();
             }
         }
+        Console.WriteLine();
     }
 }
