@@ -1,0 +1,52 @@
+using System;
+class HistogramNotDone
+{
+    static void Main()
+
+    {
+        int n = int.Parse(Console.ReadLine());
+        int p1 = 0;
+        int p2 = 0;
+        int p3 = 0;
+        int p4 = 0;
+        int p5 = 0;
+
+        while (1 < n && n < 1000)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                int currNum = int.Parse(Console.ReadLine());
+                if (currNum < 200)
+                {
+                    p1++;
+                    
+                }
+                if (200<= currNum && currNum <= 399)
+                {
+                    p2++;
+                    
+                }
+                if (400 <= currNum && currNum <= 599)
+                {
+                    p3++;
+                    
+                }
+                if (600 <= currNum && currNum <= 799)
+                {
+                    p4++;
+                    
+                }
+                if (currNum >= 800)
+                {
+                    p5++;
+                }
+            }
+            Console.WriteLine("{0}", p1 * 100.0 / n);
+            Console.WriteLine("{0}", p2 * 100.0 / n);
+            Console.WriteLine("{0}", p3  *100.0 / n);
+            Console.WriteLine("{0}", p4  *100.0 / n);
+            Console.WriteLine("{0}", p5  *100.0 / n);
+
+        }
+    }
+}
