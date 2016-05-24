@@ -5,8 +5,6 @@ class TransportPrice
     {
         int n = int.Parse(Console.ReadLine());
         string period = Console.ReadLine();
-        string day = "day";
-        string night = "night";
         double taxiStart = 0.7;
         double taxiDay = 0.79;
         double taxiNight = 0.9;
@@ -14,7 +12,7 @@ class TransportPrice
         double trainPrice = 0.06;
         while (n <= 20)
         {
-            if (period == day)
+            if (period == "day")
             {
                 double priceTaxi = (n * taxiDay) + taxiStart;
                 Console.WriteLine(priceTaxi);
