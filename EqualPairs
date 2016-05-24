@@ -1,0 +1,39 @@
+using System;
+class EqualPairs
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int currentSum = 0;
+        int previousSum = 0;
+        int maxDif = 0;
+        int dif = 0;
+        for (int i = 0; i < n; i++)
+        {
+            int first = int.Parse(Console.ReadLine());
+            int second = int.Parse(Console.ReadLine());
+            if (i==0)
+            {
+                previousSum = first + second;
+            }
+            else
+            {
+                currentSum = first + second;
+                dif = Math.Abs(currentSum - previousSum);
+                if (dif>maxDif)
+                {
+                    maxDif = dif;
+                }
+                previousSum = currentSum;
+            }
+        }
+        if (maxDif==0)
+        {
+            Console.WriteLine("Yes, value={0}",previousSum);
+        }
+        else
+        {
+            Console.WriteLine("No, maxdiff={0}",maxDif);
+        }
+    }
+}
