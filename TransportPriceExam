@@ -1,0 +1,41 @@
+using System;
+class TransportPrice
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        string period = Console.ReadLine();
+        string day = "day";
+        string night = "night";
+        double taxiStart = 0.7;
+        double taxiDay = 0.79;
+        double taxiNight = 0.9;
+        double busPrice = 0.09;
+        double trainPrice = 0.06;
+        while (n <= 20)
+        {
+            if (period == day)
+            {
+                double priceTaxi = (n * taxiDay) + taxiStart;
+                Console.WriteLine(priceTaxi);
+                break;
+            }
+            else
+            {
+                double priceTaxi = (n * taxiNight) + taxiStart;
+                Console.WriteLine(priceTaxi);
+                break;
+            }
+        }
+        if (n >= 20 && n <= 99)
+        {
+            double busTotalPrice = n * busPrice;
+            Console.WriteLine(busTotalPrice);
+        }
+        else if (n >= 100)
+        {
+            double trainTotalPrice = n * trainPrice;
+            Console.WriteLine(trainTotalPrice);
+        }
+    }
+}
