@@ -6,9 +6,16 @@ class TriangleofDollars
         int n = int.Parse(Console.ReadLine());
         for (int row = 0; row < n; row++)
         {
-            for (int col = 0; col <=row; col++)
+            for (int col = 0; col <= 2*row; col++)
             {
-                Console.Write("$ ");
+                if (col%2==0)
+                {
+                    Console.Write("$");
+                }
+                else
+                {
+                    Console.Write(" ");
+                }
             }
             Console.WriteLine();
         }
