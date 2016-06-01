@@ -1,0 +1,38 @@
+using System;
+class RhombusOfStars
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int firstRows = new int();
+        int spaces = new int();
+        for (firstRows = 1; firstRows <= n; firstRows++)
+        {
+            for (spaces = 0; spaces < n - firstRows; spaces++)
+            {
+                Console.Write(" ");
+            }
+            for (int stars = 0; stars < (n - spaces); stars++)
+            {
+                Console.Write("* ");
+            }
+            Console.WriteLine();
+        }
+        int secondRows = new int();
+        int secondSpaces = new int();
+        for (secondRows = 1; secondRows <= n - 1; secondRows++)
+        {
+            for (secondSpaces = 0; secondSpaces < secondRows; secondSpaces++)
+            {
+                Console.Write(" ");
+            }
+            for (int stars = 0; stars < n - secondRows; stars++)
+            {
+                Console.Write("* ");
+            }
+
+            Console.WriteLine();
+        }
+    }
+}
+
