@@ -1,0 +1,52 @@
+using System;
+class House
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        if (n % 2 != 0)
+        {
+            int roofRow = new int();
+            int dashes = (n - 1) / 2;
+            for (roofRow = 1; roofRow <= (n + 1) / 2; roofRow++)
+            {
+                Console.Write(new string('-', dashes));
+                for (int stars = 0; stars < (2 * roofRow) - 1; stars++)
+                {
+                    Console.Write("*");
+                }
+                Console.Write(new string('-', dashes));
+                dashes--;
+                Console.WriteLine();
+            }
+            for (int baseRow = 0; baseRow < (n - 1) / 2; baseRow++)
+            {
+                Console.Write("|");
+                Console.Write(new string('*', n - 2));
+                Console.WriteLine("|");
+            }
+        }
+        else
+        {
+            int dashesEven = (n - 2) / 2;
+            for (int roofRow = 1; roofRow <= n / 2; roofRow++)
+            {
+                Console.Write(new string('-', dashesEven));
+                for (int stars = 0; stars < 2 * roofRow; stars++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine(new string('-', dashesEven));
+                dashesEven--;
+            }
+            for (int baseRow = 0; baseRow < n / 2; baseRow++)
+            {
+                Console.Write('|');
+                Console.Write(new string('*', n - 2));
+                Console.WriteLine('|');
+            }
+        }
+    }
+}
+
+
