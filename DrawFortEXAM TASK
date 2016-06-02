@@ -1,0 +1,40 @@
+using System;
+class DrawFort
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+    
+        int columnWide = 2 * n;
+        int inside = n / 2;
+        int midSize = 2 * n - 2 * inside - 4;
+        Console.WriteLine("/{0}\\{1}/{0}\\", new string('^', inside), new string('_', midSize));
+        for (int row = 0; row < n - 3; row++)
+        {
+            for ( int col = 0; col < columnWide; col++)
+            {
+                if (col == 0 || col == columnWide - 1)
+                {
+                    Console.Write("|");
+                }
+                else if (col > 0 || col <= columnWide - 3)
+                {
+                    Console.Write(" ");
+                }
+            }
+            Console.WriteLine();
+        }
+        Console.Write("|");
+        Console.Write(new string(' ', inside+1));
+        Console.Write(new string('_', midSize));
+        Console.Write(new string(' ', inside + 1));
+        Console.WriteLine("|");
+        Console.Write('\\');
+        Console.Write(new string('_', inside));
+        Console.Write('/');
+        Console.Write(new string(' ', midSize));
+        Console.Write('\\');
+        Console.Write(new string('_', inside));
+        Console.WriteLine('/');
+    }
+}
