@@ -1,0 +1,34 @@
+using System;
+class Butterfly
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int numRow = 2 * (n - 2) + 1;
+        int numCol = 2 * n - 1;
+        int part = n - 1;
+        for (int upPartRow = 1; upPartRow <= n - 2; upPartRow++)
+        {
+            if (upPartRow % 2 != 0)
+            {
+                Console.WriteLine("{0}\\ /{0}", new string('*', n - 2));
+            }
+            else
+            {
+                Console.WriteLine("{0}\\ /{0}", new string('-', n - 2));
+            }
+        }
+        Console.WriteLine("{0}@{0}", new string(' ', part));
+        for (int lowPartRow = 1; lowPartRow <= n - 2; lowPartRow++)
+        {
+            if (lowPartRow % 2 != 0)
+            {
+                Console.WriteLine("{0}/ \\{0}", new string('*', n - 2));
+            }
+            else
+            {
+                Console.WriteLine("{0}/ \\{0}", new string('-', n - 2));
+            }
+        }
+    }
+}
