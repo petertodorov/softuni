@@ -1,0 +1,27 @@
+using System;
+class PipesBasin
+{
+    static void Main()
+    {
+        int volume = int.Parse(Console.ReadLine());
+        int p1 = int.Parse(Console.ReadLine());
+        int p2 = int.Parse(Console.ReadLine());
+        double h = double.Parse(Console.ReadLine());
+        double litreP1 = p1 * h;
+        double litreP2 = p2 * h;
+        double totalLitre = litreP1 + litreP2;
+        if (totalLitre <= volume)
+        {
+            double pipe1 = litreP1 * 100 / totalLitre;
+            double pipe2 = litreP2 * 100 / totalLitre;
+            int basin = (int)totalLitre * 100 / volume;
+            Console.WriteLine("The pool is {0}% full. Pipe 1: {1}%. Pipe 2: {2}%.",
+                basin, Math.Floor(pipe1), Math.Floor(pipe2));
+        }
+        else if (totalLitre > volume)
+        {
+            double overFlow = totalLitre - volume;
+            Console.WriteLine("For {0} hours the pool overflows with {1} liters.", h, overFlow);
+        }
+    }
+}
