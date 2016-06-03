@@ -1,0 +1,15 @@
+using System;
+class VeggieMarket
+{
+    static void Main()
+    {
+        double euro = 1.94;
+        double veggieNPrice = double.Parse(Console.ReadLine());
+        double fruitMPrice = double.Parse(Console.ReadLine());
+        double vegieKG= double.Parse(Console.ReadLine());
+        double fruitKG = double.Parse(Console.ReadLine());
+        double veggieTotalPrice = (veggieNPrice * vegieKG) / euro;
+        double fruitTotalPrice = (fruitMPrice * fruitKG) / euro;
+        Console.WriteLine("{0}",veggieTotalPrice+fruitTotalPrice);
+    }
+}
