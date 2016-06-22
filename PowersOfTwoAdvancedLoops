@@ -1,0 +1,16 @@
+using System;
+class PowersOfTwoAdvancedLoops
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int num = 1;
+        Console.WriteLine(num);
+        for (int i = 0; i < n; i++)
+        {
+            num *= 2;
+            Console.WriteLine(num);
+        }
+    }
+}
+
