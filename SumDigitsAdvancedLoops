@@ -1,0 +1,16 @@
+using System;
+class SumDigits
+{
+    static void Main()
+    {
+        int a = int.Parse(Console.ReadLine());
+        int sum = new int();
+        while (a >= 1)
+        {
+            int lastDigit = a % 10;
+            sum += lastDigit;
+            a = a / 10;
+        }
+        Console.WriteLine(sum);
+    }
+}
