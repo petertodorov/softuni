@@ -1,0 +1,35 @@
+using System;
+
+class Program
+{
+    static void Matrix(int a, int b)
+
+    {
+        int index = 0;
+        int[,] matrix = new int[a, b];
+        for (int row = 0; row < matrix.GetLength(0); row++)
+        {
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                matrix[row, col] = index;
+                index++;
+            }
+        }
+        for (int row = 0; row < matrix.GetLength(0); row++)
+        {
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                Console.Write(matrix[row, col] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+    static void Main()
+    {
+        int a = int.Parse(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
+        Matrix(a, b);
+    }
+        
+}
+
