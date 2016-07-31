@@ -1,0 +1,19 @@
+using System;
+using System.Linq;
+class MatrixAlphabet
+{
+    static void Main()
+    {
+        int height = 6;
+        int width = 4;
+        string[,] matrix = new string[height, width];
+        for (int row = 0; row < matrix.GetLength(0); row++)
+        {
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                Console.Write(matrix[row, col] = "" + (char)('a' + row) + (char)('a' + col) + '|');
+            }
+            Console.WriteLine();
+        }
+    }
+}
