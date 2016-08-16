@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+class PhoneBookTest
+{
+    static void Main()
+    {
+        Dictionary<string, string> phonebook = new Dictionary<string, string>();
+        phonebook.Add("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", "+100");
+
+        phonebook.Add("Stefan", "+555");
+        phonebook.Add("John", "+48");
+        phonebook.Add("Peter", "+359");
+      
+        int value = phonebook.Count;
+        int biggest = 0;
+        string name = null;
+        for (int i = 0; i < phonebook.Count; i++)
+        {
+            int temp = phonebook.ElementAt(i).Key.Count();
+            int[] counter = new int[value];
+            counter[i] = temp;
+            if (counter.Max() > biggest)
+            {
+                biggest = counter.Max();
+                name = phonebook.ElementAt(i).Key;
+            }
+        }
+        Console.WriteLine("{0} {1}", biggest, name);
+        Console.WriteLine();
+        Console.WriteLine();
+        phonebook.Remove(name);
+        foreach (var nom in phonebook)
+        {
+            Console.WriteLine("{0} {1}", nom.Key, nom.Value);
+        }
+    }
+}
+
+
