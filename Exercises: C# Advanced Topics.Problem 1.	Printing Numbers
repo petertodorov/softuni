@@ -1,0 +1,21 @@
+using System;
+class PrintingNumbers
+{
+    static void PrintEvenNumbers(int minRange, int maxRange)
+    {
+        for (int i = minRange; i <= maxRange; i++)
+        {
+            if (i%2==0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+
+    static void Main()
+    {
+        int minRange = int.Parse(Console.ReadLine());
+        int maxRange = int.Parse(Console.ReadLine());
+        PrintEvenNumbers(minRange, maxRange);
+    }
+}
